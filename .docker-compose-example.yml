@@ -1,0 +1,13 @@
+---
+version: '2'
+services:
+
+  epay-stub:
+    image: softrackkz/epay-stub
+    hostname: epay-stub
+    ports:
+    - "8080:8080"
+    environment:
+      JVM_ARGS: -agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=38787
+      JAVA_APP_ARGS: >
+        --server.port=8080

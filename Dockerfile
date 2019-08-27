@@ -19,6 +19,9 @@ RUN wget -O /jars/app.jar https://github.com/Softrack-LLP/epay-stub/releases/dow
 
 # RUN yum install -y java-1.8.0-openjdk ; yum clean all
 
+# ENV JVM_ARGS
+# ENV JVM_APP_ARGS
+
 ######### CMD
 
-CMD ["java", "$JVM_ARGS", "-jar", "/jars/app.jar", "$JAVA_APP_ARGS"]
+CMD ["/bin/sh", "-c", "java $JVM_ARGS -jar /jars/app.jar $JAVA_APP_ARGS"]
