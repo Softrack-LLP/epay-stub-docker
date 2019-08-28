@@ -13,7 +13,7 @@ RUN ln -s /usr/share/zoneinfo/Asia/Almaty /etc/localtime
 # copy jar
 RUN mkdir -p /jars
 # RUN yum install -y wget
-RUN wget -O /jars/app.jar https://github.com/Softrack-LLP/epay-stub/releases/download/0.0.2/epay-stub.jar
+RUN wget -O /jars/app.jar https://github.com/Softrack-LLP/epay-stub/releases/download/0.0.3/epay-stub.jar
 
 ######### java
 
